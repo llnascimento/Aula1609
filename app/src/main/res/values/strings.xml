@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">IMC</string>
+    <string name="txtTitulo">Cálculo de IMC</string>
+    <string name="txtValue">Digite o seu peso: </string>
+    <string name="txtValue1">Digite a sua altura: </string>
+    <string name="hint">Digite o seu peso</string>
+    <string name="hint1">Digite a sua altura</string>
+    <string name="resultado">Resultado</string>
+</resources>

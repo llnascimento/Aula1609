@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="vertical"
+    tools:context=".IMC">
+
+    <!-- Único filho do ScrollView -->
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="24dp"
+        android:paddingTop="100dp"
+        android:paddingBottom="100dp">
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtTitulo"
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="40dp"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="100dp"
+            />
+
+        <!-- Campo 1 - Peso -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtValue"
+                android:minHeight="48dp"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp" />
+
+            <EditText
+                android:id="@+id/num1"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/hint"
+                android:minHeight="56dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_border"
+                android:layout_marginBottom="20dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Campo 2 - Altura -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="24dp"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/txtValue1"
+                android:minHeight="48dp"
+                android:textSize="18sp"
+                android:layout_marginBottom="12dp"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/num2"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:minHeight="56dp"
+                android:hint="@string/hint"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:inputType="numberDecimal"
+                android:background="@drawable/edittext_border"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSoma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:text="@string/resultado"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/black"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+        <!-- Resultado opcional -->
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:minHeight="48dp"
+            android:gravity="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_blue_dark"
+            android:layout_marginTop="20dp" />
+
+        <!-- Espaço extra no final para testar o scrollview  -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </LinearLayout>
+</ScrollView>
