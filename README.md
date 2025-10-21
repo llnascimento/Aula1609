@@ -56,7 +56,8 @@ IMC = Peso (kg) / (Altura (m))²
 
 ## 👨‍💻 Integrantes
 
-- **Lucas Nascimento** – RGM: **38771896**
+- **Lucas Nascimento** – RGM: **5838771896**
+- **Ian Manoel** – RGM: **5840657604**
 
 ---
 
