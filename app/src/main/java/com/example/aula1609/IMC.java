@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,6 +17,7 @@ public class IMC extends AppCompatActivity {
 
     private EditText editPeso, editAltura;
     private Button btnCalcular;
+    private ImageButton btnVoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,8 +36,17 @@ public class IMC extends AppCompatActivity {
         editPeso = findViewById(R.id.num1); // Peso
         editAltura = findViewById(R.id.num2); // Altura
         btnCalcular = findViewById(R.id.btnSoma);
+        btnVoltar = findViewById(R.id.btnVoltar);
 
-        // Clique do botão
+        // Clique do botão voltar
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); // Volta para a activity anterior
+            }
+        });
+
+        // Clique do botão calcular
         btnCalcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,20 +80,15 @@ public class IMC extends AppCompatActivity {
         if (imc <= 18.5) {
             classificacao = "Magreza";
         }
-
         else if (imc > 18.5 && imc <= 24.9) {
             classificacao = "Peso normal";
         }
-
         else if (imc > 24.9 && imc <= 29.9) {
             classificacao = "Sobrepeso";
         }
-
         else if (imc > 29.9 && imc <= 39.9) {
             classificacao = "Obesidade";
         }
-
-
         else {
             classificacao = "Obesidade grave";
         }
